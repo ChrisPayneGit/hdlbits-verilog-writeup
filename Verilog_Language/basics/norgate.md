@@ -1,4 +1,4 @@
-# 🧩 AND Gate (andgate)
+# 🧩 NOR Gate (norgate)
 
 > HDLBits – Verilog Basics
 
@@ -6,20 +6,20 @@
 
 ## 📌 Problem Statement
 
-Create a module that implements a **AND gate**.
+Create a module that implements a **NOR gate**. A **NOR** function needs two operators when written in Verilog.
 
 The module has **two inputs** and **one output**.
-The output must continuously drive the **product** of the inputs.
+The output must continuously drive the **opposite of the sum** of the inputs.
 
 ---
 
-![Image](https://hdlbits.01xz.net/mw/images/7/78/Andgate.png)
+![Image](https://hdlbits.01xz.net/mw/images/5/5b/Norgate.png)
 
 ---
 
 ## 🧠 Concept Covered
 
-* **Bitwise / logical AND**
+* **Bitwise / logical NOR**
 * **Continuous assignment**
 * **Combinational logic**
 
@@ -49,12 +49,12 @@ module top_module(
     input b, 
     output out );
     
-    assign out = a && b;
+    assign out = !(a || b);
 
 endmodule
 ```
 
-### ✅ Alternative (Bitwise NOT)
+### ✅ Alternative (Bitwise NOR)
 
 ```verilog
 module top_module( 
@@ -62,7 +62,29 @@ module top_module(
     input b, 
     output out );
     
-    assign out = a & b;
+    assign out = ~(a | b);
+
+endmodule
+```
+
+```verilog
+module top_module( 
+    input a, 
+    input b, 
+    output out );
+    
+    assign out = !(a | b);
+
+endmodule
+```
+
+```verilog
+module top_module( 
+    input a, 
+    input b, 
+    output out );
+    
+    assign out = ~(a || b);
 
 endmodule
 ```
@@ -71,12 +93,12 @@ Both are valid here since `a and b` are **1-bit wide**.
 
 ---
 
-<img width="1366" height="657" alt="Solutions waveform for 2-input And gate" src="../assets/ANDGATE_wavedrom.svg" />
+<img width="1366" height="657" alt="Solutions waveform for 2-input And gate" src="../assets/NORGATE_wavedrom.svg" />
 
 ## 🔍 Explanation
 
 * The `assign` statement creates a **continuous connection**
-* `a&&b` (logical And) products the values of `a and b`
+* `!(a||b)` (logical And) sums the values of `a and b`
 * Whenever `a or b` change, `out` updates immediately
 * No procedural blocks are required
 
@@ -89,7 +111,7 @@ Both are valid here since `a and b` are **1-bit wide**.
 * `a = 1; b = 0` → `out = 0`
 * `a = 1; b = 1` → `out = 1`
 
-The timing diagram confirms **perfect and-ing**.
+The timing diagram confirms **perfect summation**.
 
 ✔️ HDLBits Simulation Status: **SUCCESS**
 
