@@ -13,7 +13,7 @@ The output must continuously drive the **sum** of the inputs.
 
 ---
 
-![Image](https://hdlbits.01xz.net/wiki/File:Andgate.png)
+![Image](https://hdlbits.01xz.net/mw/images/7/78/Andgate.png)
 
 ---
 
