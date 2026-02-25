@@ -67,7 +67,7 @@ This means the output `one` is **always driven high**, regardless of time or con
 * Simulation: ✅ Outputs match reference
 * Final Status on HDLBits: **Success!**
 
-<img width="1364" height="651" alt="Screenshot from 2026-01-27 14-50-57" src="https://github.com/user-attachments/assets/bf91cc8f-0a42-412f-b955-a22a8d519212" />
+<img width="1364" height="651" alt="Screenshot from 2026-01-27 14-50-57" src="./assets/01-wavedrom.svg" />
 
 ---
 
