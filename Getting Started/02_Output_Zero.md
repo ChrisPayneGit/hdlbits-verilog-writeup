@@ -83,7 +83,7 @@ This ensures the output `zero` is **always held at ground (0)**.
 * ModelSim Simulation: ✅ Outputs match reference
 * HDLBits Status: **Success!**
 
-<img width="1364" height="651" alt="02_Output_Zero Waveform Solution" src="./assests/02-wavedrom.svg" />
+<img width="1364" height="651" alt="02_Output_Zero Waveform Solution" src="./assets/02-wavedrom.svg" />
 
 > ⚠️ **Quartus Warning Observed**
 
