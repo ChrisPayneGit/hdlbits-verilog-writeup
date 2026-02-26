@@ -71,7 +71,7 @@ Both are valid here since `a and b` are **1-bit wide**.
 
 ---
 
-<img width="1366" height="657" alt="Solutions waveform for 2-input And gate" src="../assets/XNORGATE_wavedrom.svg" />
+<img width="1366" height="657" alt="Solutions waveform for 2-input XNOR gate" src="../assets/XNORGATEwavedrom.svg" />
 
 ## 🔍 Explanation
 

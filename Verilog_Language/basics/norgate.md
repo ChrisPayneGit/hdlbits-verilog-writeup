@@ -93,7 +93,7 @@ All are valid here since `a and b` are **1-bit wide**.
 
 ---
 
-<img width="1366" height="657" alt="Solutions waveform for 2-input And gate" src="../assets/NORGATE_wavedrom.svg" />
+<img width="1366" height="657" alt="Solutions waveform for 2-input NOR gate" src="../assets/NORGATE_wavedrom.svg" />
 
 ## 🔍 Explanation
 
