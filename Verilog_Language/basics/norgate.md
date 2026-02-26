@@ -54,7 +54,7 @@ module top_module(
 endmodule
 ```
 
-### ✅ Alternative (Bitwise NOR)
+### ✅ Alternatives (Bitwise NOR)
 
 ```verilog
 module top_module( 
@@ -89,7 +89,7 @@ module top_module(
 endmodule
 ```
 
-Both are valid here since `a and b` are **1-bit wide**.
+All are valid here since `a and b` are **1-bit wide**.
 
 ---
 
@@ -98,7 +98,7 @@ Both are valid here since `a and b` are **1-bit wide**.
 ## 🔍 Explanation
 
 * The `assign` statement creates a **continuous connection**
-* `!(a||b)` (logical And) sums the values of `a and b`
+* `!(a||b)` (logical NOR) is the opposite sum of `a and b`
 * Whenever `a or b` change, `out` updates immediately
 * No procedural blocks are required
 
@@ -106,12 +106,12 @@ Both are valid here since `a and b` are **1-bit wide**.
 
 ## 🧪 Expected Behavior
 
-* `a = 0; b = 0` → `out = 0`
+* `a = 0; b = 0` → `out = 1`
 * `a = 0; b = 1` → `out = 0`
 * `a = 1; b = 0` → `out = 0`
-* `a = 1; b = 1` → `out = 1`
+* `a = 1; b = 1` → `out = 0`
 
-The timing diagram confirms **perfect summation**.
+The timing diagram confirms **perfect opposite of the summation**.
 
 ✔️ HDLBits Simulation Status: **SUCCESS**
 
@@ -121,7 +121,7 @@ The timing diagram confirms **perfect summation**.
 
 * ❌ Forgetting `assign`
 * ❌ Using `always` for simple logic
-* ❌ Confusing `&&` and `&` for multi-bit signals
+* ❌ Confusing `||` and `|` for multi-bit signals
 * ❌ Declaring `out` as `reg`
 
 ---
@@ -130,7 +130,7 @@ The timing diagram confirms **perfect summation**.
 
 > **Continuous assignments are ideal for simple combinational logic like logic gates.**
 
-This problem introduces the **first logic operation** beyond simple wiring.
+This problem introduces the **first logic operation with two operators** beyond simple wiring.
 
 ---
 
