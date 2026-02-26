@@ -6,7 +6,7 @@
 
 ## 📌 Problem Statement
 
-Create a module that implements a **XNOR gate**. A **XNOR** function needs two operators when written in Verilog.
+Create a module that implements a **XNOR gate**. A **XNOR** function needs two operators when written in Verilog. **XNOR** is only bitwise and does not have a logical operator.
 
 The module has **two inputs** and **one output**.
 The output must continuously drive the **opposite of the xor** of the inputs.
