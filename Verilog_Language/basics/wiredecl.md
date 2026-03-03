@@ -32,6 +32,7 @@ endmodule   // End of module "top_module"
 This module has three wires (**in**, **out**, and **not_in**). **in** and **out** are declared in the module statement as the module's input and output. The **not_in** wire is internal and must be declared within the module. After the **not_in** declaration, the two **NOT** are created in the assign statements.
 
 ---
+## 📌 Problem Circuit
 
 ![Image](https://hdlbits.01xz.net/mw/images/3/3a/Wiredecl2.png)
 
@@ -90,7 +91,8 @@ endmodule
 
 ### ✅ Alternatives (Wire Decl)
 
-```Many alternatives exist based on the use of logical or bitwise operators.
+```
+Many alternatives exist based on the use of logical or bitwise operators.
 ```
 ---
 
@@ -104,34 +106,46 @@ endmodule
 
 ---
 
-## 🧪 Expected Behavior **TODO**
+## 🧪 Expected Behavior
 
-* `a = 0; b = 0` → `out = 1`
-* `a = 0; b = 1` → `out = 0`
-* `a = 1; b = 0` → `out = 0`
-* `a = 1; b = 1` → `out = 1`
+* `a = 0; b = 0; c = 0; d = 0` → `out = 0; out_n = 1`
+* `a = 1; b = 0; c = 0; d = 0` → `out = 0; out_n = 1`
+* `a = 0; b = 1; c = 0; d = 0` → `out = 0; out_n = 1`
+* `a = 1; b = 1; c = 0; d = 0` → `out = 1; out_n = 0`
+* `a = 0; b = 0; c = 1; d = 0` → `out = 0; out_n = 1`
+* `a = 1; b = 0; c = 1; d = 0` → `out = 0; out_n = 1`
+* `a = 0; b = 1; c = 1; d = 0` → `out = 0; out_n = 1`
+* `a = 1; b = 1; c = 1; d = 0` → `out = 1; out_n = 0`
+* `a = 0; b = 0; c = 0; d = 1` → `out = 0; out_n = 1`
+* `a = 1; b = 0; c = 0; d = 1` → `out = 0; out_n = 1`
+* `a = 0; b = 1; c = 0; d = 1` → `out = 0; out_n = 1`
+* `a = 1; b = 1; c = 0; d = 1` → `out = 1; out_n = 0`
+* `a = 0; b = 0; c = 1; d = 1` → `out = 1; out_n = 0`
+* `a = 1; b = 0; c = 1; d = 1` → `out = 1; out_n = 0`
+* `a = 0; b = 1; c = 1; d = 1` → `out = 1; out_n = 0`
+* `a = 1; b = 1; c = 1; d = 1` → `out = 1; out_n = 0`
 
-The timing diagram confirms **perfect opposite of the exclusive summation**. **TODO**
+
+The timing diagram confirms **proper behavior of the circuit**.
 
 ✔️ HDLBits Simulation Status: **SUCCESS**
 
 ---
 
-## ⚠️ Common Mistakes **TODO**
+## ⚠️ Common Mistakes
 
 * ❌ Forgetting `assign`
 * ❌ Using `always` for simple logic
-* ❌ Forgetting `^` is only for single-bit signals
-* ❌ Confusing `!` and `~` for multi-bit signals
+* ❌ Confusing `AND` and `OR` gates
 * ❌ Declaring `out` as `reg`
 
 ---
 
-## 🎯 Takeaway **TODO**
+## 🎯 Takeaway
 
 > **Continuous assignments are ideal for simple combinational logic like logic gates.**
 
-This problem introduces the **Another logic operation with two operators** beyond simple wiring.
+This problem introduces the **internal wires for circuits**.
 
 ---
 
