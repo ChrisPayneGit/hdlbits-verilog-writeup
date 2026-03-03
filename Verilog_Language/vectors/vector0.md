@@ -1,4 +1,4 @@
-# 🧩 Vectors (Vector0) **TODO**
+# 🧩 Vectors (Vector0)
 
 > HDLBits – Verilog Basics
 
@@ -17,14 +17,14 @@ assign out = my_vector[10]; // Part-select one bit out of the vector (Selecting 
 
 ## 📌 Problem Statement
 
-**Build** a circuit that has **one 3-bit input**, then **outputs the same vector**, and also splits it into **three separate 1-bit outputs**. Connect output **o0** to the input vector's position *0, **o1** to position 1, etc.
+**Build** a circuit that has **one 3-bit input**, then **outputs the same vector**, and also splits it into **three separate 1-bit outputs**. Connect output **o0** to the input vector's position **0**, **o1** to position **1**, etc.
 
 ---
 ## 📌 Problem Circuit
 
 ![Image](https://hdlbits.01xz.net/mw/images/a/ae/Vector0.png)
 
-In a diagram, a tick mark with a number next to it indicates the width of the vector (or "bus"), rather than drawing a separate line for each bit in the vector.
+A tick mark with a number next to it indicates the width of the vector (or "bus"). This is easier than drawing a separate line for each bit in the vector.
 
 ---
 
@@ -83,8 +83,8 @@ The order of the **assign** statements does not impact the result.
 
 ## 🔍 Explanation
 
-* The `**datatype** [x:y] **vec_name**` statement creates a **vector** of that datatype with x-y # of bits
-* The `**vec_name[x]**` statement select as specific bit/bits from a vector
+* The `datatype [x:y] vec_name` statement creates a **vector** of that datatype with x-y # of bits
+* The `vec_name[x]` statement selects a specific bit/bits from a vector
 * The `assign` statement creates a **continuous connection**
 * No procedural blocks are required
 
