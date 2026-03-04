@@ -15,7 +15,7 @@ This operation is often used when the **endianness** of a piece of data needs to
 ---
 ## 📌 Problem Circuit **TODO: ALL BELOW**
 
-![Image](https://hdlbits.01xz.net/mw/images/a/ae/Vector0.png)
+![Image](../assets/circuit-drawings/vector2-drawing.svg)
 
 A tick mark with a number next to it indicates the width of the vector (or "bus"). This is easier than drawing a separate line for each bit in the vector.
 
